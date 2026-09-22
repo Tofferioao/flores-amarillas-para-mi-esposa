@@ -56,6 +56,34 @@
         </article>
       </section>
 
+      <section class="card" aria-labelledby="fotos-title">
+        <h2 id="fotos-title">Nuestros recuerdos</h2>
+        <p>
+          Si quieres, puedes elegir fotos desde Google Fotos para verlas aquí. Si no autorizas, igual se muestran
+          recuerdos románticos de ejemplo.
+        </p>
+        <div class="actions">
+          <button id="btnGoogleFotos" class="btn btn--accent">Elegir fotos de Google Fotos</button>
+        </div>
+        <p id="estadoGoogleFotos" class="feedback" aria-live="polite">
+          Mostrando recuerdos locales mientras decides si conectar Google Fotos.
+        </p>
+        <div id="galeriaFotos" class="photo-grid" aria-live="polite">
+          <figure class="photo-card">
+            <div class="photo-card__placeholder" aria-hidden="true">🌼💛</div>
+            <figcaption>Tu sonrisa ilumina mis días.</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <div class="photo-card__placeholder" aria-hidden="true">🐝🌻</div>
+            <figcaption>Cada detalle contigo florece.</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <div class="photo-card__placeholder" aria-hidden="true">✨📸</div>
+            <figcaption>Mi lugar favorito siempre eres tú.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section class="card" aria-labelledby="razones-title">
         <h2 id="razones-title">Razones por las que te amo</h2>
         <ul class="reasons">
@@ -77,6 +105,7 @@
       <p>Hecho con amor para ti. 🌼</p>
     </footer>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="./script.js"></script>
   </body>
 </html>

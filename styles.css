@@ -134,6 +134,42 @@ a:focus-visible {
   padding-left: 1.25rem;
 }
 
+.photo-grid {
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.photo-card {
+  margin: 0;
+  border: 1px solid #f1e1a9;
+  border-radius: 0.75rem;
+  background: #fff8de;
+  overflow: hidden;
+}
+
+.photo-card img,
+.photo-card__placeholder {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card__placeholder {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: linear-gradient(180deg, #fff3b0, #ffec8a);
+}
+
+.photo-card figcaption {
+  padding: 0.6rem 0.65rem;
+  font-size: 0.92rem;
+  color: #5b482d;
+}
+
 .garden__hint {
   margin-top: 0;
 }
@@ -153,6 +189,7 @@ a:focus-visible {
   height: 110px;
   transform-origin: bottom center;
   animation: sway 4.5s ease-in-out infinite;
+  cursor: pointer;
 }
 
 .stem {
@@ -226,6 +263,40 @@ a:focus-visible {
   opacity: 0.95;
 }
 
+.bee {
+  position: absolute;
+  width: 20px;
+  height: 12px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    #f2b705 0 5px,
+    #2f2617 5px 8px
+  );
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  animation: buzz 6s linear infinite;
+  cursor: pointer;
+}
+
+.bee::before,
+.bee::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  width: 9px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.bee::before {
+  left: 3px;
+}
+
+.bee::after {
+  right: 3px;
+}
+
 .footer {
   text-align: center;
   color: #6f5a36;
@@ -250,6 +321,24 @@ a:focus-visible {
   to {
     transform: translateY(230px) rotate(300deg);
     opacity: 0;
+  }
+}
+
+@keyframes buzz {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(35px, -18px);
+  }
+  50% {
+    transform: translate(0, -28px);
+  }
+  75% {
+    transform: translate(-30px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 
