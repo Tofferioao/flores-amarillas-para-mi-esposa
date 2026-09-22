@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flores amarillas para mi esposa</title>
+    <meta
+      name="description"
+      content="Una página romántica e interactiva con flores amarillas, una disculpa sincera y mucho amor."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mensaje">Saltar al contenido principal</a>
+    <header class="hero">
+      <p class="hero__eyebrow">Día de las Flores Amarillas 🌼</p>
+      <h1>Perdóname por olvidar la fecha, mi amor</h1>
+      <p class="hero__text">
+        Preparé este pequeño jardín para decirte, con el corazón en la mano, que lo siento y que te amo muchísimo.
+      </p>
+    </header>
+
+    <main id="mensaje" class="layout" tabindex="-1">
+      <section class="card" aria-labelledby="disculpa-title">
+        <h2 id="disculpa-title">Mi disculpa sincera</h2>
+        <p>
+          Sé que olvidé un día especial y entiendo que eso duele. No fue por falta de amor: al contrario, te amo tanto
+          que quiero demostrarte cada día cuánto vales para mí.
+        </p>
+        <p>
+          Gracias por tu paciencia y por tu cariño. Quiero seguir aprendiendo a cuidarte mejor, a escucharte más y a
+          celebrar cada momento contigo.
+        </p>
+        <p class="editable-note">
+          <strong>Nota editable:</strong> aquí puedes personalizar este mensaje con tus palabras.
+        </p>
+      </section>
+
+      <section class="card" aria-labelledby="interacciones-title">
+        <h2 id="interacciones-title">Un detalle para ti</h2>
+        <div class="actions">
+          <button id="btnCarta" class="btn" aria-controls="carta" aria-expanded="false">Abrir carta de amor</button>
+          <button id="btnFlores" class="btn btn--accent" aria-describedby="contadorFlores">Hacer florecer más</button>
+        </div>
+        <p id="contadorFlores" class="counter" aria-live="polite">Flores regaladas hoy: 12</p>
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+
+        <article id="carta" class="letter" hidden>
+          <h3>Para ti, con todo mi amor</h3>
+          <p>
+            Prometo convertir esta disculpa en acciones: más detalles, más abrazos largos, más tiempo de calidad y más
+            razones para sonreír juntos.
+          </p>
+          <p>Gracias por ser mi hogar favorito. Te amo hoy, mañana y siempre. 💛</p>
+        </article>
+      </section>
+
+      <section class="card" aria-labelledby="razones-title">
+        <h2 id="razones-title">Razones por las que te amo</h2>
+        <ul class="reasons">
+          <li>Porque tu forma de amar hace todo más bonito.</li>
+          <li>Porque contigo los días simples se vuelven inolvidables.</li>
+          <li>Porque me inspiras a ser mejor persona.</li>
+          <li>Porque tu sonrisa es mi lugar feliz.</li>
+        </ul>
+      </section>
+
+      <section class="garden card" aria-labelledby="jardin-title">
+        <h2 id="jardin-title">Nuestro jardín amarillo</h2>
+        <p class="garden__hint">Toca “Hacer florecer más” para ver crecer este detalle para ti.</p>
+        <div id="garden" class="garden__canvas" role="img" aria-label="Jardín animado de flores amarillas"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Hecho con amor para ti. 🌼</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
