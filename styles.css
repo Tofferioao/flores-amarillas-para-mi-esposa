@@ -1,0 +1,276 @@
+:root {
+  --bg: #fffaf0;
+  --surface: #fffef8;
+  --text: #3f2f1c;
+  --muted: #5e4b2f;
+  --gold: #f7c948;
+  --yellow: #f9dd67;
+  --green: #8fbf7f;
+  --accent: #db9f00;
+  --shadow: 0 8px 20px rgba(63, 47, 28, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #fffde8 0%, var(--bg) 60%);
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #111;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.hero {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(1.6rem, 5vw, 2.5rem);
+}
+
+.hero__text {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.layout {
+  width: min(100% - 2rem, 980px);
+  margin: 0 auto 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #f2e6bc;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.editable-note {
+  color: #725a34;
+  background: #fff3bf;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  border: 2px solid var(--accent);
+  background: #fff;
+  color: var(--text);
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+.btn--accent {
+  background: linear-gradient(180deg, #ffe589, #ffd24f);
+}
+
+.btn:hover {
+  filter: brightness(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible,
+a:focus-visible {
+  outline: 3px solid #2d6a4f;
+  outline-offset: 2px;
+}
+
+.counter,
+.feedback {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.letter {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #fff7d6;
+  border: 1px solid #f2e6bc;
+}
+
+.reasons {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.garden__hint {
+  margin-top: 0;
+}
+
+.garden__canvas {
+  min-height: 220px;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, #fffef9 0%, #fef9e4 55%, #ecf7e8 100%);
+  border: 1px dashed #e2d39a;
+  position: relative;
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  width: 48px;
+  height: 110px;
+  transform-origin: bottom center;
+  animation: sway 4.5s ease-in-out infinite;
+}
+
+.stem {
+  position: absolute;
+  bottom: 0;
+  left: 22px;
+  width: 4px;
+  height: 72px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #7fb069, #4a7a3a);
+}
+
+.center {
+  position: absolute;
+  top: 24px;
+  left: 18px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #c88a00;
+  z-index: 2;
+}
+
+.petal {
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff2a6, #f3c632 70%);
+  transform-origin: center;
+}
+
+.petal:nth-child(3) {
+  transform: rotate(45deg) translateY(-8px);
+}
+
+.petal:nth-child(4) {
+  transform: rotate(90deg) translateY(-8px);
+}
+
+.petal:nth-child(5) {
+  transform: rotate(135deg) translateY(-8px);
+}
+
+.petal:nth-child(6) {
+  transform: rotate(180deg) translateY(-8px);
+}
+
+.petal:nth-child(7) {
+  transform: rotate(225deg) translateY(-8px);
+}
+
+.petal:nth-child(8) {
+  transform: rotate(270deg) translateY(-8px);
+}
+
+.petal:nth-child(9) {
+  transform: rotate(315deg) translateY(-8px);
+}
+
+.petal-rain {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(35deg);
+  background: #f9d44b;
+  animation: fall 2.8s linear forwards;
+  opacity: 0.95;
+}
+
+.footer {
+  text-align: center;
+  color: #6f5a36;
+  padding: 0 1rem 2rem;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-20px) rotate(20deg);
+    opacity: 0.95;
+  }
+  to {
+    transform: translateY(230px) rotate(300deg);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 760px) {
+  .layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .garden,
+  .hero,
+  .card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
